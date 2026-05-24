@@ -50,6 +50,7 @@ This project fine-tunes the pretrained `bert-base-uncased` model from Hugging Fa
 
 - Optimizer: AdamW
 - Learning rate: `2e-5`
+- Weight_decay: `0.01`
 - Batch size: `8`
 - Epochs: `2`
 - Loss function: CrossEntropyLoss (computed automatically by BERT)
@@ -61,7 +62,7 @@ ________________________________________
 | Model | Architecture | Dataset | Accuracy |
 |---|---|---|---|
 | CNN-BiLSTM-Attention | Custom hybrid recurrent model | SST-3 | ~64% |
-| BERT Fine-Tuning | Pretrained Transformer encoder | SST-3 | ~72–75% |
+| BERT Fine-Tuning | Pretrained Transformer encoder | SST-3 | ~71–75% |
 
 ### Key Differences
 
