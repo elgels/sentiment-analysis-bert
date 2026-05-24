@@ -119,12 +119,10 @@ ________________________________________
 ```text
 sentiment-analysis-bert/
 │
-├── notebooks/
-│   └── bert_finetuning_sst3.ipynb
+├── bert_finetuning_sst3.ipynb
 │
 ├── figures/
 │   ├── confusion_matrix.png
-│   └── training_results.png
 │
 ├── requirements.txt
 ├── README.md
