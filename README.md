@@ -32,11 +32,35 @@ This project fine-tunes the pretrained `bert-base-uncased` model from Hugging Fa
 
 ### BERT Architecture
 
-- 12 Transformer encoder layers
-- Hidden size: 768
+The BERT-base model consists of **12 Transformer encoder layers**.
+Each encoder layer contains:
+
 - Multi-head self-attention
-- Pretrained contextual token embeddings
-- `[CLS]` token used for sentence-level classification
+- Add & Layer Normalization
+- Feed-forward neural network
+- Add & Layer Normalization
+
+**Input Processing**
+
+Input text is converted into:
+
+- Token embeddings (dimension 768)
+- Positional embeddings
+
+These embeddings are passed through the 12 Transformer encoder layers to produce **contextualized token representations**.
+
+For sentiment classification, the final hidden representation of the special **[CLS] token** is used as the sentence-level representation and passed to a classification layer.
+
+**Architecture Flow**
+
+Input Embeddings (768)
+→ Positional Embeddings
+→ 12 Transformer Encoder Layers
+→ Contextualized Token Embeddings
+→ [CLS] Token Representation
+→ Linear Classification Layer
+→ Logits
+→ Softmax Probabilities
 
 ### Fine-Tuning Pipeline
 
