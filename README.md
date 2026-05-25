@@ -40,7 +40,7 @@ Each encoder layer contains:
 - Feed-forward neural network
 - Add & Layer Normalization
 
-**Input Processing**
+#### Input Processing
 
 Input text is converted into:
 
@@ -51,24 +51,37 @@ These embeddings are passed through the 12 Transformer encoder layers to produce
 
 For sentiment classification, the final hidden representation of the special **[CLS] token** is used as the sentence-level representation and passed to a classification layer.
 
-**Architecture Flow**
+#### Architecture Flow
 
-Input Embeddings (768)
-→ Positional Embeddings
-→ 12 Transformer Encoder Layers
-→ Contextualized Token Embeddings
-→ [CLS] Token Representation
-→ Linear Classification Layer
-→ Logits
-→ Softmax Probabilities
+Input Embeddings (768) <br>
+→ Positional Embeddings<br>
+→ 12 Transformer Encoder Layers<br>
+→ Contextualized Token Embeddings<br>
+→ [CLS] Token Representation<br>
+→ Linear Classification Layer<br>
+→ Logits<br>
+→ Softmax Probabilities<br>
 
 ### Fine-Tuning Pipeline
 
-1. Load SST dataset using `torchtext`
-2. Convert sentences into BERT token IDs using the pretrained tokenizer
-3. Create attention masks and padded sequences
-4. Fine-tune BERT using `BertForSequenceClassification`
-5. Evaluate performance using validation/test accuracy and confusion matrix analysis
+- Load the SST dataset using torchtext
+- Convert sentences into BERT token IDs using the pretrained tokenizer
+- Generate padded input sequences and attention masks for Transformer processing
+- Initialize BertForSequenceClassification with pretrained BERT-base weights
+- Fine-tune the model on SST sentiment classification
+- Evaluate performance using validation/test accuracy and confusion matrix analysis
+
+#### Parameters Fine-Tuned During Training
+
+The model starts from pretrained BERT representations learned on large-scale text corpora. During fine-tuning, all Transformer parameters are updated, including:
+
+- Token embeddings
+- Positional embeddings
+- All 12 Transformer encoder layers
+- Query/Key/Value (Q/K/V) projection matrices for every attention head
+- Feed-forward network layers
+- Layer normalization parameters
+- Final classification layer
 
 ### Training Configuration
 
