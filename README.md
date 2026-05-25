@@ -134,11 +134,9 @@ ________________________________________
 ## Future Improvements
 
 - Fine-tune larger Transformer models such as RoBERTa-base
-- Experiment with learning rate scheduling and batch size tuning
-- Add precision, recall, and F1-score analysis
-- Perform hyperparameter optimization
-- Visualize attention patterns and token importance
-- Compare additional pretrained Transformer architectures such as DistilBERT
+- Experiment with additional hyperparameter tuning, including learning rate scheduling and batch size optimization
+- Visualize attention patterns and token importance across sentences
+- Compare performance with additional pretrained Transformer architectures such as DistilBERT
 
 ________________________________________
 
