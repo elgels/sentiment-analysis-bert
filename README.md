@@ -98,7 +98,7 @@ ________________________________________
 
 | Model | Architecture | Dataset | Accuracy |
 |---|---|---|---|
-| CNN-BiLSTM-Attention | Custom hybrid recurrent model | SST-3 | ~64% |
+| CNN-BiLSTM-Attention | Custom hybrid recurrent model | SST-3 | ~65% |
 | BERT Fine-Tuning | Pretrained Transformer encoder | SST-3 | ~71–75% |
 
 ### Key Differences
