@@ -163,7 +163,7 @@ sentiment-analysis-bert/
 ├── bert_finetuning_sst3.ipynb
 │
 ├── figures/
-│   ├── confusion_matrix.png
+│   ├── BERT_Confusion_Matrix.png
 │
 ├── requirements.txt
 ├── README.md
