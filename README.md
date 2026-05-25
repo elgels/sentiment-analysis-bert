@@ -82,9 +82,15 @@ ________________________________________
 
 ### Error Analysis
 
-The main source of classification error involved the **neutral class**. The model frequently confused neutral examples with mildly positive or mildly negative sentiment, while direct confusion between strongly positive and strongly negative examples was much lower.
+The confusion matrix shows that the model struggled most with the **neutral class**. Many truly negative reviews were predicted as neutral (200 cases), and many truly positive reviews were also predicted as neutral (91 cases). At the same time, truly neutral reviews were frequently classified as positive (113 cases) or negative (128 cases).
 
-This suggests that the model successfully learned overall sentiment polarity but struggled with ambiguous middle-category sentiment, which is a known challenge in SST-3 classification tasks.
+In contrast, the model made far fewer direct mistakes between positive and negative sentiment: only 55 negative reviews were classified as positive, and only 23 positive reviews were classified as negative.
+
+This pattern suggests that the model learned to distinguish strong sentiment relatively well, but had difficulty identifying sentences with weak, mixed, or ambiguous emotional signals.
+
+Neutral sentiment is inherently difficult because it is not a strong emotional category like positive or negative. Instead, it often represents ambiguity, subtlety, or the absence of clear sentiment. As a result, both humans and models struggle to classify neutral sentences consistently.
+
+Human agreement studies on the Stanford Sentiment Treebank (SST) also show that annotators agree much less on neutral examples than on clearly positive or negative ones. If humans themselves disagree on what counts as neutral, there is an upper limit on how accurately a model can learn this category.
 
 ________________________________________
 
