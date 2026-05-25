@@ -108,7 +108,7 @@ ________________________________________
 - Learned task-specific language patterns primarily from SST training data
 - Used recurrent hidden states to model sequential information
 - Attention layer highlighted important tokens
-- CNN layers extracted local phrase-level features
+- CNN layers extracted local n-gram features from neighboring words
 
 ### BERT Transformer Model
 - Used pretrained contextual language representations
