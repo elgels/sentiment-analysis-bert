@@ -6,7 +6,7 @@ This project fine-tunes the pretrained `bert-base-uncased` Transformer model for
 
 The primary goal of this project is to compare a modern Transformer-based architecture with a previous hybrid deep learning approach combining CNN, BiLSTM, and Attention mechanisms trained on the same dataset. While the earlier CNN-BiLSTM-Attention model incorporated pretrained GloVe word embeddings, it still learned most task-specific contextual patterns from the SST training data through recurrent sequence modeling. In contrast, BERT starts from deeply pretrained contextual language representations learned from large-scale text corpora and uses self-attention to model relationships between all tokens in a sentence simultaneously.
 
-The fine-tuned BERT model achieved approximately 71% validation accuracy and over 72% test accuracy, improving upon the earlier CNN-BiLSTM-Attention baseline (~64% validation accuracy).
+The fine-tuned BERT model achieved approximately 71% validation accuracy and over 72% test accuracy, improving upon the earlier CNN-BiLSTM-Attention baseline (~65% validation accuracy).
 
 ________________________________________
 
