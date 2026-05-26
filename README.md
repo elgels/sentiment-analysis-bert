@@ -101,6 +101,8 @@ ________________________________________
 | CNN-BiLSTM-Attention | Custom hybrid recurrent model | SST-3 | ~65% |
 | BERT Fine-Tuning | Pretrained Transformer encoder | SST-3 | ~71–75% |
 
+For the earlier CNN-BiLSTM-Attention implementation, see the [LSTM Sentiment Analysis Repository](https://github.com/elgels/sentiment-analysis-lstm).
+
 ### Key Differences
 
 ### CNN-BiLSTM-Attention Model
