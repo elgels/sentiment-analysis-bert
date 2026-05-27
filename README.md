@@ -122,9 +122,9 @@ For the earlier CNN-BiLSTM-Attention implementation, see the [LSTM Sentiment Ana
 
 ### Error Analysis
 
-The confusion matrix shows that the model struggled most with the **neutral class**. Many truly negative reviews were predicted as neutral (200 cases), and many truly positive reviews were also predicted as neutral (91 cases). At the same time, truly neutral reviews were frequently classified as positive (113 cases) or negative (128 cases).
+The confusion matrix shows that the model struggled most with the **neutral class**. Many truly negative reviews were predicted as neutral (125 cases), and many truly positive reviews were also predicted as neutral (72 cases). At the same time, truly neutral reviews were frequently classified as positive (116 cases) or negative (151 cases).
 
-In contrast, the model made far fewer direct mistakes between positive and negative sentiment: only 55 negative reviews were classified as positive, and only 23 positive reviews were classified as negative.
+In contrast, the model made far fewer direct mistakes between positive and negative sentiment: only 53 negative reviews were classified as positive, and only 26 positive reviews were classified as negative.
 
 This pattern suggests that the model learned to distinguish strong sentiment relatively well, but had difficulty identifying sentences with weak, mixed, or ambiguous emotional signals.
 
