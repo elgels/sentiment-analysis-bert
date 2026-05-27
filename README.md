@@ -88,6 +88,7 @@ The model starts from pretrained BERT representations learned on large-scale tex
 - Optimizer: AdamW
 - Learning rate: `2e-5`
 - Weight_decay: `0.01`
+- Learning‑rate scheduler: Linear warmup (10% of steps) + linear decay
 - Batch size: `8`
 - Epochs: `2`
 - Loss function: CrossEntropyLoss (computed automatically by BERT)
